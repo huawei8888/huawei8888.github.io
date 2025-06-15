@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>生日快乐</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="balloons">
+        <div class="balloon balloon1">🎈</div>
+        <div class="balloon balloon2">🎉</div>
+        <div class="balloon balloon3">🎂</div>
+        <div class="balloon balloon4">🎁</div>
+        <div class="balloon balloon5">🎊</div>
+    </div>
+
+    <div class="container">
+        <h1 class="glow-text">生日快乐！</h1>
+        <p class="sub-title">祝你拥有一个难忘的生日</p>
+        
+        <div class="cake-container">
+            <div class="cake">
+                <div class="candles">
+                    <div class="candle">
+                        <div class="flame"></div>
+                    </div>
+                    <div class="candle">
+                        <div class="flame"></div>
+                    </div>
+                    <div class="candle">
+                        <div class="flame"></div>
+                    </div>
+                </div>
+                <div class="layers"></div>
+            </div>
+        </div>
+
+        <div class="message-box">
+            <button onclick="showMessage()" class="btn">点击获取特别祝福</button>
+            <p id="special-message"></p>
+        </div>
+
+        <!-- 新增的签名墙部分 -->
+        <div class="signature-wall">
+            <h2>留下你的祝福吧 ✍️</h2>
+            <div class="signature-container">
+                <canvas id="signature-pad" class="signature-pad" width="800" height="300"></canvas>
+            </div>
+            <div class="signature-controls">
+                <button class="btn clear-btn">清除</button>
+                <button class="btn save-btn">保存</button>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>愿你的每一天都充满快乐与惊喜 🎉</p>
+        </div>
+    </div>
+
+
+    <!-- 添加了一个隐藏的音频元素 -->
+    <audio id="birthday-song" src="birthday.mp3" preload="auto" autoplay loop></audio>
+    <button class="music-btn" onclick="toggleMusic()">🎵 播放/暂停音乐</button>
+    <script src="script.js"></script>
+</body>
+</html>
